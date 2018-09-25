@@ -18,7 +18,7 @@
 /**
  * GET网络请求
  */
-- (NSNumber *)getDataWithUrl:(NSString *)url Params:(id )params CompletionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler{
+- (NSNumber *)getDataWithUrl:(NSString *)url params:(id )params completionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler{
     NSNumber *requestId = [self generateRequestId];
     self.dispatchTable[requestId] = [self.afnManager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -44,7 +44,7 @@
 /**
  * POST网络请求
  */
-- (NSNumber *)postDataWithUrl:(NSString *)url Params:(id )params CompletionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler{
+- (NSNumber *)postDataWithUrl:(NSString *)url params:(id )params completionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler{
     NSNumber *requestId = [self generateRequestId];
     self.dispatchTable[requestId] = [self.afnManager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
 
@@ -74,10 +74,10 @@
  * 上传网络请求
  */
 - (NSNumber *)uploadDataWithUrl:(NSString *)url
-                         Params:(NSDictionary *)params
-                           Data:(NSData *)data
-                       FileName:(NSString *)fileName
-              CompletionHandler:(void(^)(BOOL isSuccess, id result, id header))completionHandler{
+                         params:(NSDictionary *)params
+                           data:(NSData *)data
+                       fileName:(NSString *)fileName
+              completionHandler:(void(^)(BOOL isSuccess, id result, id header))completionHandler{
 
     NSNumber *requestId = [self generateRequestId];
     self.dispatchTable[requestId] = [self.afnManager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -102,7 +102,7 @@
 /**
   * 下载
  */
-- (NSNumber *)downloadDataWithUrl:(NSString *)url Params:(NSDictionary *)params CompletionHandler:(void(^)(BOOL isSuccess, id result ,id header))completionHandler{
+- (NSNumber *)downloadDataWithUrl:(NSString *)url params:(NSDictionary *)params completionHandler:(void(^)(BOOL isSuccess, id result ,id header))completionHandler{
     //构建可变的urlRequest
     NSMutableURLRequest*urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     //添加请求体
