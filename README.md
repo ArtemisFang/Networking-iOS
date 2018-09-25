@@ -6,28 +6,28 @@
 直接将下载的文件加入代码中
 1.调用GET请求
 
-  [[INetWork sharedInstance] getDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result, id header) {
+    [[INetWork sharedInstance] getDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result, id header) {
         if (isSuccess) {
-
+        
         }else{
 
         }    
     }];
 2.调用POST请求
 
- [[INetWork sharedInstance] postDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result, id header) {
-      if (isSuccess) {
+    [[INetWork sharedInstance] postDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result, id header) {
+        if (isSuccess) {
 
-      }else{
+        }else{
 
-      } 
-  }];
+        } 
+    }];
 3.调用下载请求
 
- [[INetWork sharedInstance] downloadDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result,id header) {
-      if(isSuccess){
+    [[INetWork sharedInstance] downloadDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result,id header) {
+        if(isSuccess){
       
-      }else{
+        }else{
       
-      }
- }];
+        }
+    }];
