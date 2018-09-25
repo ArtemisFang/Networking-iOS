@@ -23,8 +23,8 @@
  * @param completionHandler 回调
  */
 - (NSNumber *)getDataWithUrl:(NSString *)url
-                      Params:(id )params
-           CompletionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler;
+                      params:(id )params
+           completionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler;
 /**
  * 调用POST网络请求
  * @param url 地址
@@ -32,8 +32,8 @@
  * @param completionHandler 回调
  */
 - (NSNumber *)postDataWithUrl:(NSString *)url
-                       Params:(id )params
-            CompletionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler;
+                       params:(id )params
+            completionHandler:(void(^)(BOOL isSuccess, id result,id header))completionHandler;
 
 /**
  * 调用上传网络请求
@@ -56,8 +56,8 @@
  * @param completionHandler 回调
  */
 - (NSNumber *)downloadDataWithUrl:(NSString *)url
-                           Params:(NSDictionary *)params
-                CompletionHandler:(void(^)(BOOL isSuccess, id result, id header))completionHandler;
+                           params:(NSDictionary *)params
+                completionHandler:(void(^)(BOOL isSuccess, id result, id header))completionHandler;
 
 /**
  * 取消网络请求
