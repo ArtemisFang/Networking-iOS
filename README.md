@@ -40,5 +40,15 @@
         }else{
 
         }
-    }]
+    }];
+5.取消指定网络请求
+    
+    [[INetWork sharedInstance] cancelWithRequestTag:requestId];
+    
+6.取消所有网络请求
+
+    AFHTTPSessionManager *afnManager = [INetWork sharedInstance].afnManager;
+    [afnManager.operationQueue cancelAllOperations];
+    
+
 如果你偶遇了这份代码对你有帮助，麻烦给我点亮一颗小星星~Thanks♪(･ω･)ﾉ
