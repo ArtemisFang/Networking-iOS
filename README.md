@@ -4,6 +4,7 @@
 
 使用方法：
 直接将下载的文件加入代码中
+
 1.调用GET请求
 
     [[INetWork sharedInstance] getDataWithUrl:url params:params completionHandler:^(BOOL isSuccess, id result, id header) {
@@ -31,5 +32,13 @@
       
         }
     }];
+4.调用上传请求
 
+    [[INetWork sharedInstance] uploadDataWithUrl:url params:params data:data fileName:fileName completionHandler:^(BOOL isSuccess, id result, id header) {
+        if (isSuccess) {
+
+        }else{
+
+        }
+    }]
 如果你偶遇了这份代码对你有帮助，麻烦给我点亮一颗小星星~Thanks♪(･ω･)ﾉ
