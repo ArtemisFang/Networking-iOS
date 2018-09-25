@@ -2,8 +2,8 @@
 //  INetWork.m
 //  MangoSDK
 //
-//  Created by 雷琦玮 on 2018/9/6.
-//  Copyright © 2018年 雷琦玮. All rights reserved.
+//  Created by 方媛 on 2018/9/6.
+//  Copyright © 2018年 方媛. All rights reserved.
 //
 
 #import "INetWork.h"
